@@ -2,6 +2,8 @@ extends Node2D
 
 var flipped = false
 
+var falling = false
+
 @onready var nonflippedmap = $"../TileMapLayer"
 @onready var flippedmap = $"../TileMapLayer2"
 
@@ -19,8 +21,8 @@ func _has_exited_floor() -> bool:
 	var space_state = get_world_2d().direct_space_state
 	var params = PhysicsShapeQueryParameters2D.new()
 	params.set_shape(playerBody.shape)
-	params.transform = global_transform
-	params.collision_mask = 1 << (floorLayer - 1)  # Only query floor layer
+	params.transform = playerNode.transform
+	params.collision_mask = 1 << (1 - 1)  # Only query floor layer
 	  
 	var results = space_state.intersect_shape(params, 1)
 	return results.is_empty()
@@ -28,18 +30,20 @@ func _has_exited_floor() -> bool:
 func _process(_delta: float) -> void:
 	if not flipped:
 		if Input.is_action_just_pressed("flip") and playerNode.is_on_floor():
-			playerBody.disabled = true
+			playerBody.set_deferred("disabled", true)
+			await get_tree().create_timer(0.1).timeout
 			while not _has_exited_floor():
-				pass
-			playerBody.disabled = false
+				playerNode.translate(Vector2.DOWN)
+			playerBody.set_deferred("disabled", false)
 			flipped = true
 			
 	else:
-		if Input.is_action_just_pressed("flip") and playerNode.is_on_floor():
-			playerBody.disabled = true
+		if Input.is_action_just_pressed("flip") and playerNode.is_on_ceiling():
+			playerBody.set_deferred("disabled", true)
+			await get_tree().create_timer(0.1).timeout
 			while not _has_exited_floor():
-				pass
-			playerBody.disabled = false
+				playerNode.translate(Vector2.UP)
+			playerBody.set_deferred("disabled", false)
 			flipped = false
 			
 	if flipped:

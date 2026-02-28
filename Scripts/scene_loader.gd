@@ -5,4 +5,5 @@ var i = 0
 
 func nextScene():
 	i += 1
+	print("loading next scene...")
 	get_tree().change_scene_to_file.call_deferred(scenes[i])
