@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://cgfl8c1cqldre" path="res://Assets/knight.png" id="2_0hol4"]
 [ext_resource type="Texture2D" uid="uid://cm2sl5o7jwfr" path="res://Assets/world_tileset.png" id="3_q6r6c"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4wnb"]
+size = Vector2(9, 16)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_kdubu"]
 atlas = ExtResource("2_0hol4")
 region = Rect2(0, 0, 32, 32)
@@ -255,9 +258,6 @@ animations = [{
 "name": &"running",
 "speed": 10.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4wnb"]
-size = Vector2(9, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7plk7"]
 texture = ExtResource("3_q6r6c")
@@ -524,19 +524,19 @@ sources/0 = SubResource("TileSetAtlasSource_7plk7")
 [node name="Player" type="CharacterBody2D" parent="." unique_id=1971737534]
 script = ExtResource("1_epypp")
 
-[node name="VisualElements" type="Node2D" parent="Player" unique_id=1061276761]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player/VisualElements" unique_id=1331455262]
-sprite_frames = SubResource("SpriteFrames_q5dlx")
-animation = &"running"
-frame_progress = 0.7362151
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=197575431]
 position = Vector2(-0.5, 3)
 shape = SubResource("RectangleShape2D_c4wnb")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=243483961]
+zoom = Vector2(2, 2)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=1331455262]
+sprite_frames = SubResource("SpriteFrames_q5dlx")
+animation = &"idle"
+frame_progress = 0.006549914
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=23206561]
+position = Vector2(0, -1)
 tile_map_data = PackedByteArray("AAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAACAAEAAAAAAAAAAAADAAEAAAAAAAAAAAAEAAEAAAAAAAAAAAAFAAEAAAAAAAEAAAAGAAEAAAAAAAEAAAAHAAEAAAAAAAAAAAAIAAEAAAAAAAAAAAAJAAEAAAAAAAEAAAAKAAEAAAAAAAEAAAALAAEAAAAAAAAAAAAMAAEAAAAAAAAAAAD//wIAAAAAAAEAAAAAAAIAAAAAAAEAAAABAAIAAAAAAAEAAAACAAIAAAAAAAEAAAADAAIAAAAAAAEAAAAEAAIAAAAAAAEAAAAFAAIAAAAAAAEAAAAGAAIAAAAAAAEAAAAHAAIAAAAAAAEAAAAIAAIAAAAAAAEAAAAJAAIAAAAAAAEAAAAKAAIAAAAAAAEAAAALAAIAAAAAAAEAAAAMAAIAAAAAAAEAAAAFAAAAAAAAAAEAAAAGAAAAAAAAAAEAAAAJAAAAAAAAAAEAAAAJAP//AAAAAAEAAAAKAP//AAAAAAEAAAAKAAAAAAAAAAEAAAAFAP//AAAAAAAAAAAGAP//AAAAAAAAAAAJAP7/AAAAAAAAAAAKAP7/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_fbwgr")
