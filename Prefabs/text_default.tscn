@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cafxfgufpiuui"]
+
+[node name="Text1" type="Label" unique_id=263910221]
+z_index = -5
+offset_left = 11.0
+offset_top = 1.000001
+offset_right = 198.0
+offset_bottom = 24.0
+scale = Vector2(0.31374392, 0.64791083)
+text = "Use Arrow keys to move"

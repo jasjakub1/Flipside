@@ -6,6 +6,7 @@ const MAX_SPEED = 50.0
 const JUMP_VELOCITY = 275.0
 
 var SPEED = 0
+
 @onready var animated_sprite = $AnimatedSprite2D
 
 func _physics_process(delta: float) -> void:
@@ -18,8 +19,8 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("up") and is_on_floor():
 			velocity.y = -1 * JUMP_VELOCITY
 	else:
-		if Input.is_action_just_pressed("down") and is_on_floor():
-			velocity.y = -1 * JUMP_VELOCITY
+		if Input.is_action_just_pressed("up") and is_on_floor():
+			velocity.y = JUMP_VELOCITY
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -45,8 +46,8 @@ func _physics_process(delta: float) -> void:
 			SPEED += DECELERATION
 		elif SPEED > 0:
 			SPEED -= DECELERATION
+		if abs(SPEED) < 2.0:
+			SPEED = 0
 	velocity.x = SPEED
-	if SPEED == 0:
-		print("still")
 
 	move_and_slide()
