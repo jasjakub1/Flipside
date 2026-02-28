@@ -7,9 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://cafxfgufpiuui" path="res://Prefabs/text_default.tscn" id="5_l730f"]
 [ext_resource type="Theme" uid="uid://de0fu0i6deala" path="res://Assets/new_theme.tres" id="6_mimo7"]
 [ext_resource type="Texture2D" uid="uid://bbuk5xodpxrd1" path="res://Assets/door.png" id="7_5udjf"]
+[ext_resource type="Script" uid="uid://66jst2he125a" path="res://Scripts/scene_change.gd" id="7_iekmd"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iekmd"]
-size = Vector2(11, 23)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqpta"]
+size = Vector2(12, 22)
 
 [node name="Node2D" type="Node2D" unique_id=530611151]
 
@@ -38,11 +39,14 @@ text = "Press Space to flip sides of the map"
 
 [node name="Door" type="Node2D" parent="." unique_id=708432550]
 position = Vector2(220, -55)
+script = ExtResource("7_iekmd")
 
 [node name="Sprite2D" type="Sprite2D" parent="Door" unique_id=1887012405]
 scale = Vector2(0.03616855, 0.03616855)
 texture = ExtResource("7_5udjf")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1897577908]
-position = Vector2(0.5, -1.5)
-shape = SubResource("RectangleShape2D_iekmd")
+[node name="Area2D" type="Area2D" parent="Door" unique_id=50198615]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D" unique_id=1920352742]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_sqpta")
