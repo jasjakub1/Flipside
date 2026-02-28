@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://20npkfpqnmbj"]
+
+[ext_resource type="PackedScene" uid="uid://cfn3ylm57vd2l" path="res://Prefabs/tile_map_layer.tscn" id="1_36tvn"]
+[ext_resource type="PackedScene" uid="uid://bswssx31jjx4k" path="res://Prefabs/tile_map_layer_2.tscn" id="2_0if3r"]
+[ext_resource type="PackedScene" uid="uid://d0cdtntvqoetx" path="res://Prefabs/game_manager.tscn" id="3_pcjwn"]
+
+[node name="Scene3" type="Node2D" unique_id=863320758]
+
+[node name="TileMapLayer" parent="." unique_id=1816079958 instance=ExtResource("1_36tvn")]
+
+[node name="TileMapLayer2" parent="." unique_id=746684253 instance=ExtResource("2_0if3r")]
+
+[node name="GameManager" parent="." unique_id=1526663803 instance=ExtResource("3_pcjwn")]
