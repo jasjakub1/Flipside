@@ -6,13 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://d0cdtntvqoetx" path="res://Prefabs/game_manager.tscn" id="4_5udjf"]
 [ext_resource type="PackedScene" uid="uid://cafxfgufpiuui" path="res://Prefabs/text_default.tscn" id="5_l730f"]
 [ext_resource type="Theme" uid="uid://de0fu0i6deala" path="res://Assets/new_theme.tres" id="6_mimo7"]
-[ext_resource type="Texture2D" uid="uid://bbuk5xodpxrd1" path="res://Assets/door.png" id="7_5udjf"]
-[ext_resource type="Script" uid="uid://66jst2he125a" path="res://Scripts/scene_change.gd" id="7_iekmd"]
+[ext_resource type="PackedScene" uid="uid://drojujijc7an8" path="res://Prefabs/door.tscn" id="7_5udjf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sqpta"]
-size = Vector2(12, 22)
-
-[node name="Node2D" type="Node2D" unique_id=530611151]
+[node name="Scene1" type="Node2D" unique_id=530611151]
 
 [node name="Player" parent="." unique_id=127984811 instance=ExtResource("1_ux0hl")]
 
@@ -37,16 +33,5 @@ offset_bottom = 75.0
 scale = Vector2(0.31374392, 0.64791083)
 text = "Press Space to flip sides of the map"
 
-[node name="Door" type="Node2D" parent="." unique_id=708432550]
-position = Vector2(220, -55)
-script = ExtResource("7_iekmd")
-
-[node name="Sprite2D" type="Sprite2D" parent="Door" unique_id=1887012405]
-scale = Vector2(0.03616855, 0.03616855)
-texture = ExtResource("7_5udjf")
-
-[node name="Area2D" type="Area2D" parent="Door" unique_id=50198615]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/Area2D" unique_id=1920352742]
-position = Vector2(0, -3)
-shape = SubResource("RectangleShape2D_sqpta")
+[node name="Door" parent="." unique_id=2142673694 instance=ExtResource("7_5udjf")]
+position = Vector2(220, -56)

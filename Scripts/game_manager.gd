@@ -8,16 +8,38 @@ var flipped = false
 @onready var sky_bg = $"../Player/Oip"
 @onready var cave_bg = $"../Player/VeryDarkPurpleFreeSolidcolorBackground"
 
-@onready var playerBody = $"../Player"
+@onready var playerNode = $"../Player"
+@onready var playerBody = $"../Player/PlayerCollisionShape2D"
+
+@onready var floorLayer = $"../TileMapLayer"
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _has_exited_floor() -> bool:
+	var space_state = get_world_2d().direct_space_state
+	var params = PhysicsShapeQueryParameters2D.new()
+	params.set_shape(playerBody.shape)
+	params.transform = global_transform
+	params.collision_mask = 1 << (floorLayer - 1)  # Only query floor layer
+	  
+	var results = space_state.intersect_shape(params, 1)
+	return results.is_empty()
+
+func _process(_delta: float) -> void:
 	if not flipped:
-		if Input.is_action_just_pressed("ui_accept") and playerBody.is_on_floor():
+		if Input.is_action_just_pressed("flip") and playerNode.is_on_floor():
+			playerBody.disabled = true
+			while not _has_exited_floor():
+				pass
+			playerBody.disabled = false
 			flipped = true
 			
 	else:
-		if Input.is_action_just_pressed("ui_accept") and playerBody.is_on_floor():
+		if Input.is_action_just_pressed("flip") and playerNode.is_on_floor():
+			playerBody.disabled = true
+			while not _has_exited_floor():
+				pass
+			playerBody.disabled = false
 			flipped = false
 			
 	if flipped:
