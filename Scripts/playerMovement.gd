@@ -37,7 +37,9 @@ func _physics_process(delta: float) -> void:
 	
 	var direction := Input.get_axis("left", "right")
 	
-	if (not is_on_floor()):
+	if (not is_on_floor() and not game_manager.flipped):
+		animated_sprite.play("jump_mid")
+	elif (not is_on_ceiling() and game_manager.flipped):
 		animated_sprite.play("jump_mid")
 	elif direction != 0:
 		animated_sprite.play("running")
