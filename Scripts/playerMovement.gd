@@ -14,7 +14,7 @@ var SPEED = 0
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if game_manager.flipped:
-		if not is_on_floor():
+		if not is_on_ceiling():
 			velocity -= get_gravity() * delta
 	else:
 		if not is_on_floor():
