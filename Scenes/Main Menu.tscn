@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://c5qfj7g4r4bbf"]
+
+[ext_resource type="Texture2D" uid="uid://dufks57o6jyfm" path="res://Assets/logo.png" id="1_totuj"]
+[ext_resource type="Texture2D" uid="uid://d30sgolrjpdkk" path="res://Assets/92a4de.png" id="2_hcxxy"]
+[ext_resource type="Texture2D" uid="uid://dbpfo2e2ag7aj" path="res://Assets/platformSplashScreen.png" id="3_ur25d"]
+[ext_resource type="Texture2D" uid="uid://cbenuwrl08w11" path="res://Assets/playMk2.png" id="4_udm2q"]
+[ext_resource type="Script" uid="uid://dpui3u5n8wd42" path="res://Scripts/playButton.gd" id="5_udm2q"]
+[ext_resource type="Texture2D" uid="uid://dh14o0dyiujfg" path="res://Assets/credits.png" id="7_0vewo"]
+[ext_resource type="Script" uid="uid://glfq6h177eb7" path="res://Scripts/CreditButton.gd" id="8_wib81"]
+
+[node name="MainMenu" type="Node2D" unique_id=966724167]
+
+[node name="Logo" type="Node2D" parent="." unique_id=136254229]
+position = Vector2(267, 142)
+scale = Vector2(4.6399994, 4.6399994)
+
+[node name="Sprite2D" type="Sprite2D" parent="Logo" unique_id=280978367]
+texture = ExtResource("1_totuj")
+
+[node name="BackGround" type="Sprite2D" parent="." unique_id=1363930795]
+z_index = -10
+position = Vector2(587.00006, 335.00003)
+scale = Vector2(8.72, 3.7400002)
+texture = ExtResource("2_hcxxy")
+
+[node name="PlatformSplashScreen" type="Sprite2D" parent="." unique_id=1965273188]
+position = Vector2(941, 431)
+scale = Vector2(3.4609375, 3.4609375)
+texture = ExtResource("3_ur25d")
+
+[node name="PlayMk2" type="Sprite2D" parent="." unique_id=723413705]
+position = Vector2(268.00003, 384)
+scale = Vector2(7, 7)
+texture = ExtResource("4_udm2q")
+
+[node name="Button" type="Button" parent="PlayMk2" unique_id=1051770672]
+visibility_layer = 0
+offset_left = -14.571434
+offset_top = -18.714285
+offset_right = -6.571434
+offset_bottom = -10.714285
+scale = Vector2(3.7428577, 1.32)
+script = ExtResource("5_udm2q")
+
+[node name="Credits" type="Sprite2D" parent="." unique_id=808609686]
+position = Vector2(294, 434)
+scale = Vector2(7, 7)
+texture = ExtResource("7_0vewo")
+
+[node name="Button" type="Button" parent="Credits" unique_id=77454541]
+visibility_layer = 0
+offset_left = -24.285719
+offset_top = -11.0
+offset_right = -16.285719
+offset_bottom = -3.0
+scale = Vector2(5, 1.4114282)
+script = ExtResource("8_wib81")
+
+[connection signal="pressed" from="PlayMk2/Button" to="PlayMk2/Button" method="_on_pressed"]
+[connection signal="pressed" from="Credits/Button" to="Credits/Button" method="_on_pressed"]

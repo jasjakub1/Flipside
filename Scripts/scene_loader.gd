@@ -10,5 +10,13 @@ func nextScene():
 
 func reloadScene():
 	print("restarting scene")
-	get_tree().change_scene_to_file("res://Scenes/filler.tscn")
+	get_tree().change_scene_to_file.call_deferred("res://Scenes/filler.tscn")
 	get_tree().change_scene_to_file(scenes[i])
+	
+func loadSceneNum(sceneNum : int):
+	print("loading scene {sceneNum}")
+	get_tree().change_scene_to_file.call_deferred(scenes[sceneNum])
+	
+func loadSceneFile(sceneFilePath : String):
+	print("loading scene...")
+	get_tree().change_scene_to_file.call_deferred(sceneFilePath)
