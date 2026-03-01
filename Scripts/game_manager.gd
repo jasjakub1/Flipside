@@ -16,6 +16,7 @@ var falling = false
 @onready var floorLayer = $"../TileMapLayer"
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _has_exited_floor() -> bool:
 	var space_state = get_world_2d().direct_space_state
@@ -28,6 +29,8 @@ func _has_exited_floor() -> bool:
 	return results.is_empty()
 
 func _process(_delta: float) -> void:
+	if Input.is_action_just_pressed("retry"):
+		sceneLoader.reloadScene()
 	if not flipped:
 		if Input.is_action_just_pressed("flip") and playerNode.is_on_floor():
 			playerBody.set_deferred("disabled", true)
