@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ccnr8ate74nco"]
+
+[ext_resource type="Texture2D" uid="uid://d30sgolrjpdkk" path="res://Assets/92a4de.png" id="1_q6vst"]
+[ext_resource type="Texture2D" uid="uid://bvb0pbe8e2m81" path="res://Assets/unnamed.png" id="2_13fhg"]
+
+[node name="Victory" type="Node2D" unique_id=239767971]
+
+[node name="92a4De" type="Sprite2D" parent="." unique_id=2036557578]
+position = Vector2(596, 336)
+scale = Vector2(8.253333, 3.5100002)
+texture = ExtResource("1_q6vst")
+
+[node name="Victory" type="Sprite2D" parent="." unique_id=1773947791]
+position = Vector2(604, 386.00003)
+scale = Vector2(15, 15)
+texture = ExtResource("2_13fhg")
