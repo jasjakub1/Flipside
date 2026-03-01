@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Flipside"
-run/main_scene="uid://3wgfm0cn4p47"
+run/main_scene="uid://c5qfj7g4r4bbf"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://Assets/icon.svg"
 

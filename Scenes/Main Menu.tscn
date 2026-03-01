@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cbenuwrl08w11" path="res://Assets/playMk2.png" id="4_udm2q"]
 [ext_resource type="Script" uid="uid://dpui3u5n8wd42" path="res://Scripts/playButton.gd" id="5_udm2q"]
 [ext_resource type="Texture2D" uid="uid://dh14o0dyiujfg" path="res://Assets/credits.png" id="7_0vewo"]
+[ext_resource type="Texture2D" uid="uid://bq153igdb8uae" path="res://Assets/sun.png" id="8_4lp62"]
 [ext_resource type="Script" uid="uid://glfq6h177eb7" path="res://Scripts/CreditButton.gd" id="8_wib81"]
 
 [node name="MainMenu" type="Node2D" unique_id=966724167]
@@ -55,6 +56,12 @@ offset_right = -16.285719
 offset_bottom = -3.0
 scale = Vector2(5, 1.4114282)
 script = ExtResource("8_wib81")
+
+[node name="Sun" type="Sprite2D" parent="." unique_id=224481379]
+z_index = -2
+position = Vector2(844, 309)
+scale = Vector2(5.132083, 5.132083)
+texture = ExtResource("8_4lp62")
 
 [connection signal="pressed" from="PlayMk2/Button" to="PlayMk2/Button" method="_on_pressed"]
 [connection signal="pressed" from="Credits/Button" to="Credits/Button" method="_on_pressed"]

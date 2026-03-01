@@ -29,6 +29,10 @@ func _has_exited_floor() -> bool:
 	return results.is_empty()
 
 func _process(_delta: float) -> void:
+	
+	if Input.is_action_just_pressed("return"):
+		sceneLoader.loadSceneFile("res://Scenes/Main Menu.tscn")
+	
 	if Input.is_action_just_pressed("retry"):
 		sceneLoader.reloadScene()
 	if not flipped:

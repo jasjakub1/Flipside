@@ -1,6 +1,6 @@
 extends Node
 
-var scenes = ["res://Scenes/Scene 1.tscn", "res://Scenes/Scene 3.tscn", "res://Scenes/Scene 6.tscn", "res://Scenes/Scene 2.tscn", "res://Scenes/Scene 4.tscn", "res://Scenes/Scene 5.tscn", "res://Scenes/Scene 7.tscn", "res://Scenes/Scene 8.tscn"]
+var scenes = ["res://Scenes/Scene 1.tscn", "res://Scenes/Scene 3.tscn", "res://Scenes/Scene 6.tscn", "res://Scenes/Scene 2.tscn", "res://Scenes/Scene 5.tscn", "res://Scenes/Scene 7.tscn", "res://Scenes/Scene 8.tscn"]
 var i = 0
 
 func nextScene():
@@ -11,6 +11,7 @@ func nextScene():
 func reloadScene():
 	print("restarting scene")
 	get_tree().change_scene_to_file.call_deferred("res://Scenes/filler.tscn")
+	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file(scenes[i])
 	
 func loadSceneNum(sceneNum : int):
