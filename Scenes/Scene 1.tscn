@@ -34,4 +34,4 @@ scale = Vector2(0.31374392, 0.64791083)
 text = "Press Space to flip sides of the map"
 
 [node name="Door" parent="." unique_id=2142673694 instance=ExtResource("7_5udjf")]
-position = Vector2(220, -56)
+position = Vector2(217, -58)
