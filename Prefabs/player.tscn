@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cgfl8c1cqldre" path="res://Assets/knight.png" id="2_y5hcb"]
 [ext_resource type="Texture2D" uid="uid://drgimstcny87i" path="res://Assets/OIP.webp" id="3_y5hcb"]
 [ext_resource type="Texture2D" uid="uid://t0suqkl5texf" path="res://Assets/very-dark-purple-free-solidcolor-background.jpg" id="4_2nftw"]
+[ext_resource type="AudioStream" uid="uid://bcryw7anmcipg" path="res://Assets/joentnt-walk-on-dirt-1-291981.mp3" id="5_knrd4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4wnb"]
 size = Vector2(9, 16)
@@ -198,3 +199,8 @@ z_index = -10
 position = Vector2(35.000008, 52.5)
 scale = Vector2(0.08958334, 0.0789352)
 texture = ExtResource("4_2nftw")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=586273317]
+stream = ExtResource("5_knrd4")
+volume_db = 24.0
+parameters/looping = true
