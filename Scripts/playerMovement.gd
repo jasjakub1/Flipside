@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
-const ACCELERATION = 8.0
-const DECELERATION = 5.0
-const MAX_SPEED = 50.0
-const JUMP_VELOCITY = 275.0
-const gravity = 980.0
+const ACCELERATION = 12.0
+const DECELERATION = 7.5
+const MAX_SPEED = 75.0
+const JUMP_VELOCITY = 325.0
+const gravity = 1120.0
 var SPEED = 0
 var footstep_timer = 0.0
 const footstep_interval = 0.35  # time between steps

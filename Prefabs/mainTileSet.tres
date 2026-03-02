@@ -1,0 +1,61 @@
+[gd_resource type="TileSet" format=3 uid="uid://dbm50gx4wedp0"]
+
+[ext_resource type="Texture2D" uid="uid://bt100wkr65jsf" path="res://Assets/customTileMap.png" id="1_eu2fw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p7skj"]
+texture = ExtResource("1_eu2fw")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.989075, -15.989077, 15.939507, 15.93951, -16.103695, 15.989075, -16.046387, -15.989077)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.989075, -15.989077, 15.939507, 15.93951, -16.103695, 15.989075, -16.046387, -15.989077)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.989075, -15.989077, 15.939507, 15.93951, -16.103695, 15.989075, -16.046387, -15.989077)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.989075, -15.989077, 15.939507, 15.93951, -16.103695, 15.989075, -16.046387, -15.989077)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.989075, -15.989077, 15.939507, 15.93951, -16.103695, 15.989075, -16.046387, -15.989077)
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.989075, -15.989077, 15.939507, 15.93951, -16.103695, 15.989075, -16.046387, -15.989077)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.989075, -15.989077, 15.939507, 15.93951, -16.103695, 15.989075, -16.046387, -15.989077)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16.187286, -16.187284, 15.647709, -15.827568, 16.007427, 16.187284, -16.187286, 16.00743)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.989075, -15.989077, 15.939507, 15.93951, -16.103695, 15.989075, -16.046387, -15.989077)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(15.989075, -15.989077, 15.939507, 15.93951, -16.103695, 15.989075, -16.046387, -15.989077)
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+9:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_p7skj")
