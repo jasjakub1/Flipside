@@ -2,7 +2,7 @@ extends Node2D
 
 var flipped = false
 
-var falling = false
+var movementDisabled = false
 
 @onready var nonflippedmap = $"../TileMapLayer"
 @onready var flippedmap = $"../TileMapLayer2"
@@ -35,23 +35,26 @@ func _process(_delta: float) -> void:
 	
 	if Input.is_action_just_pressed("retry"):
 		sceneLoader.reloadScene()
-	if not flipped:
-		if Input.is_action_just_pressed("flip") and playerNode.is_on_floor():
-			playerBody.set_deferred("disabled", true)
-			await get_tree().create_timer(0.1).timeout
-			while not _has_exited_floor():
-				playerNode.translate(Vector2.DOWN)
-			playerBody.set_deferred("disabled", false)
-			flipped = true
+		
+	if Input.is_action_just_pressed("flip") and playerNode.is_on_floor() and not flipped:
+		movementDisabled = true
+		playerBody.set_deferred("disabled", true)
+		playerNode.translate(Vector2.DOWN * 3)
+		while not _has_exited_floor():
+			playerNode.translate(Vector2.DOWN)
+		playerBody.set_deferred("disabled", false)
+		flipped = true
+		movementDisabled = false
 			
-	else:
-		if Input.is_action_just_pressed("flip") and playerNode.is_on_ceiling():
-			playerBody.set_deferred("disabled", true)
-			await get_tree().create_timer(0.1).timeout
-			while not _has_exited_floor():
-				playerNode.translate(Vector2.UP)
-			playerBody.set_deferred("disabled", false)
-			flipped = false
+	if Input.is_action_just_pressed("flip") and playerNode.is_on_ceiling() and flipped:
+		movementDisabled = true
+		playerBody.set_deferred("disabled", true)
+		playerNode.translate(Vector2.UP * 3)
+		while not _has_exited_floor():
+			playerNode.translate(Vector2.UP)
+		playerBody.set_deferred("disabled", false)
+		flipped = false
+		movementDisabled = false
 			
 	if flipped:
 		nonflippedmap.hide()

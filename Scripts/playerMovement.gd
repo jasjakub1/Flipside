@@ -4,21 +4,23 @@ const ACCELERATION = 8.0
 const DECELERATION = 5.0
 const MAX_SPEED = 50.0
 const JUMP_VELOCITY = 275.0
+const gravity = 980.0
 var SPEED = 0
 var footstep_timer = 0.0
-var footstep_interval = 0.35  # time between steps
+const footstep_interval = 0.35  # time between steps
+var i = 0
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var game_manager = $"../GameManager"
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	var grounded = is_on_floor() or is_on_ceiling()
 	if game_manager.flipped:
 		if not is_on_ceiling():
-			velocity -= get_gravity() * delta
+			velocity.y -= gravity * delta
+			i += 1
 	else:
 		if not is_on_floor():
-			velocity += get_gravity() * delta
+			velocity.y += gravity * delta
 
 	# Handle jump.
 	if not game_manager.flipped:
@@ -37,7 +39,6 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
 	var direction := Input.get_axis("left", "right")
-	var is_walking = direction != 0
 	
 	if (not is_on_floor() and not game_manager.flipped):
 		animated_sprite.play("jump_mid")
@@ -60,11 +61,10 @@ func _physics_process(delta: float) -> void:
 			SPEED += DECELERATION
 		elif SPEED > 0:
 			SPEED -= DECELERATION
-		if abs(SPEED) < 2.0:
+		if abs(SPEED) < 5.0:
 			SPEED = 0
-	velocity.x = SPEED
 	
-	if grounded and is_walking:
+	if ((is_on_floor() and not game_manager.flipped) or (is_on_ceiling() and game_manager.flipped)) and (direction != 0):
 		footstep_timer -= delta
 		if footstep_timer <= 0:
 			$AudioStreamPlayer2D.play()
@@ -72,5 +72,10 @@ func _physics_process(delta: float) -> void:
 	else:
 		footstep_timer = 0
 		$AudioStreamPlayer2D.stop()
-
+	
+	if not game_manager.movementDisabled:
+		velocity.x = SPEED
+	else:
+		velocity.x = 0
+	
 	move_and_slide()
