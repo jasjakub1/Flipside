@@ -14,6 +14,21 @@ func reloadScene():
 	await get_tree().create_timer(0.1).timeout
 	get_tree().change_scene_to_file(scenes[i])
 	
+func undoScene():
+	if i > 0:
+		i -= 1
+	print("going back to the last scene")
+	get_tree().change_scene_to_file.call_deferred("res://Scenes/filler.tscn")
+	await get_tree().create_timer(0.1).timeout
+	get_tree().change_scene_to_file(scenes[i])
+	
+func skipScene():
+	i += 1
+	print("skipping to next scene")
+	get_tree().change_scene_to_file.call_deferred("res://Scenes/filler.tscn")
+	await get_tree().create_timer(0.1).timeout
+	get_tree().change_scene_to_file(scenes[i])
+	
 func loadSceneNum(sceneNum : int):
 	print("loading scene {sceneNum}")
 	get_tree().change_scene_to_file.call_deferred(scenes[sceneNum])

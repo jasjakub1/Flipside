@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://c5qfj7g4r4bbf"]
+[gd_scene format=3 uid="uid://cdvxy7ladqtp3"]
 
 [ext_resource type="Texture2D" uid="uid://dufks57o6jyfm" path="res://Assets/logo.png" id="1_totuj"]
 [ext_resource type="Texture2D" uid="uid://d30sgolrjpdkk" path="res://Assets/92a4de.png" id="2_hcxxy"]
 [ext_resource type="Texture2D" uid="uid://dbpfo2e2ag7aj" path="res://Assets/platformSplashScreen.png" id="3_ur25d"]
 [ext_resource type="Texture2D" uid="uid://cbenuwrl08w11" path="res://Assets/playMk2.png" id="4_udm2q"]
-[ext_resource type="Script" uid="uid://dpui3u5n8wd42" path="res://Scripts/playButton.gd" id="5_udm2q"]
+[ext_resource type="Script" path="res://Scripts/playButton.gd" id="5_udm2q"]
 [ext_resource type="Texture2D" uid="uid://dh14o0dyiujfg" path="res://Assets/credits.png" id="7_0vewo"]
 [ext_resource type="Texture2D" uid="uid://bq153igdb8uae" path="res://Assets/sun.png" id="8_4lp62"]
-[ext_resource type="Script" uid="uid://glfq6h177eb7" path="res://Scripts/CreditButton.gd" id="8_wib81"]
+[ext_resource type="Script" path="res://Scripts/CreditButton.gd" id="8_wib81"]
 
 [node name="MainMenu" type="Node2D" unique_id=966724167]
 
