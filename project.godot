@@ -13,15 +13,19 @@ config_version=5
 config/name="Flipside"
 run/main_scene="uid://c5qfj7g4r4bbf"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://Assets/icon.svg"
 
 [autoload]
 
 sceneLoader="*uid://boymr7gqrlnnh"
 
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 

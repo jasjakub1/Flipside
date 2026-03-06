@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://denywe7edwh15"]
+
+[ext_resource type="Script" uid="uid://b4aancq2rx8fy" path="res://Scripts/level_select_button.gd" id="1_foju2"]
+[ext_resource type="Texture2D" uid="uid://cyuvyd7v44ttg" path="res://Assets/levelTyp.png" id="2_85a6n"]
+[ext_resource type="FontFile" uid="uid://baqt4eyve8bsr" path="res://Assets/ThaleahFat.ttf" id="3_vspqt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vx7lq"]
+font = ExtResource("3_vspqt")
+font_size = 40
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[node name="LevelSelectButton" type="Button" unique_id=1222874599]
+z_index = 1
+offset_right = 64.0
+offset_bottom = 64.0
+script = ExtResource("1_foju2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=255339469]
+position = Vector2(32, 32)
+texture = ExtResource("2_85a6n")
+
+[node name="Label" type="Label" parent="." unique_id=506099749]
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+label_settings = SubResource("LabelSettings_vx7lq")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -196,7 +196,6 @@ texture = ExtResource("3_y5hcb")
 
 [node name="VeryDarkPurpleFreeSolidcolorBackground" type="Sprite2D" parent="." unique_id=1705493520]
 z_index = -10
-position = Vector2(35.000008, 52.5)
 scale = Vector2(0.08958334, 0.0789352)
 texture = ExtResource("4_2nftw")
 

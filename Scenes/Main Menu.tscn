@@ -1,67 +1,144 @@
 [gd_scene format=3 uid="uid://c5qfj7g4r4bbf"]
 
-[ext_resource type="Texture2D" uid="uid://dufks57o6jyfm" path="res://Assets/logo.png" id="1_totuj"]
 [ext_resource type="Texture2D" uid="uid://d30sgolrjpdkk" path="res://Assets/92a4de.png" id="2_hcxxy"]
 [ext_resource type="Texture2D" uid="uid://dbpfo2e2ag7aj" path="res://Assets/platformSplashScreen.png" id="3_ur25d"]
-[ext_resource type="Texture2D" uid="uid://cbenuwrl08w11" path="res://Assets/playMk2.png" id="4_udm2q"]
 [ext_resource type="Script" uid="uid://dpui3u5n8wd42" path="res://Scripts/playButton.gd" id="5_udm2q"]
-[ext_resource type="Texture2D" uid="uid://dh14o0dyiujfg" path="res://Assets/credits.png" id="7_0vewo"]
-[ext_resource type="Texture2D" uid="uid://bq153igdb8uae" path="res://Assets/sun.png" id="8_4lp62"]
+[ext_resource type="Texture2D" uid="uid://d2mw5tamydhco" path="res://Assets/levels 2.png" id="7_0vewo"]
+[ext_resource type="Texture2D" uid="uid://dcmrkdc1e7g2a" path="res://Assets/play 2.png" id="7_4lp62"]
+[ext_resource type="Script" uid="uid://c7hj3773rvl7l" path="res://Scenes/levelsButton.gd" id="7_wib81"]
+[ext_resource type="Texture2D" uid="uid://du1ts1eedba8q" path="res://Assets/logo 3.png" id="8_0vewo"]
+[ext_resource type="Texture2D" uid="uid://djt12tirtrnjo" path="res://Assets/credits 2.png" id="8_tbdrc"]
 [ext_resource type="Script" uid="uid://glfq6h177eb7" path="res://Scripts/CreditButton.gd" id="8_wib81"]
+[ext_resource type="Texture2D" uid="uid://bdmndke5axb80" path="res://Assets/sun 2.png" id="9_0vewo"]
+[ext_resource type="PackedScene" uid="uid://denywe7edwh15" path="res://Prefabs/level_select_button.tscn" id="11_tbdrc"]
 
 [node name="MainMenu" type="Node2D" unique_id=966724167]
 
-[node name="Logo" type="Node2D" parent="." unique_id=136254229]
-position = Vector2(267, 142)
-scale = Vector2(4.6399994, 4.6399994)
-
-[node name="Sprite2D" type="Sprite2D" parent="Logo" unique_id=280978367]
-texture = ExtResource("1_totuj")
-
 [node name="BackGround" type="Sprite2D" parent="." unique_id=1363930795]
 z_index = -10
-position = Vector2(587.00006, 335.00003)
-scale = Vector2(8.72, 3.7400002)
+position = Vector2(644.00006, 359.00003)
+scale = Vector2(10.146667, 4.2550006)
 texture = ExtResource("2_hcxxy")
 
 [node name="PlatformSplashScreen" type="Sprite2D" parent="." unique_id=1965273188]
-position = Vector2(941, 431)
-scale = Vector2(3.4609375, 3.4609375)
+position = Vector2(991.00006, 433)
+scale = Vector2(4.8131804, 4.8131804)
 texture = ExtResource("3_ur25d")
 
-[node name="PlayMk2" type="Sprite2D" parent="." unique_id=723413705]
-position = Vector2(268.00003, 384)
-scale = Vector2(7, 7)
-texture = ExtResource("4_udm2q")
+[node name="Logo" type="Sprite2D" parent="." unique_id=1603490844]
+position = Vector2(270, 139)
+scale = Vector2(2.3515623, 2.3515623)
+texture = ExtResource("8_0vewo")
 
-[node name="Button" type="Button" parent="PlayMk2" unique_id=1051770672]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=380516692]
+position = Vector2(641, 358)
+
+[node name="Play button" type="Sprite2D" parent="." unique_id=1118092063]
+position = Vector2(277.99994, 312.99997)
+scale = Vector2(1.4629976, 1.4629976)
+texture = ExtResource("7_4lp62")
+
+[node name="Button" type="Button" parent="Play button" unique_id=1051770672]
 visibility_layer = 0
-offset_left = -14.571434
-offset_top = -18.714285
-offset_right = -6.571434
-offset_bottom = -10.714285
-scale = Vector2(3.7428577, 1.32)
+offset_left = -82.70686
+offset_top = -34.176384
+offset_right = -74.70686
+offset_bottom = -26.176384
+scale = Vector2(21.027617, 8.766798)
 script = ExtResource("5_udm2q")
 
-[node name="Credits" type="Sprite2D" parent="." unique_id=808609686]
-position = Vector2(294, 434)
-scale = Vector2(7, 7)
+[node name="Levels button" type="Sprite2D" parent="." unique_id=1694630158]
+position = Vector2(278, 439)
+scale = Vector2(1.463, 1.463)
 texture = ExtResource("7_0vewo")
 
-[node name="Button" type="Button" parent="Credits" unique_id=77454541]
+[node name="Button" type="Button" parent="Levels button" unique_id=2029847786]
+z_index = -11
+offset_left = -79.28914
+offset_top = -31.44226
+offset_right = 77.92207
+offset_bottom = 32.125763
+script = ExtResource("7_wib81")
+
+[node name="Credits button" type="Sprite2D" parent="." unique_id=1824294393]
+position = Vector2(278, 566.00006)
+scale = Vector2(1.463, 1.463)
+texture = ExtResource("8_tbdrc")
+
+[node name="Button" type="Button" parent="Credits button" unique_id=77454541]
 visibility_layer = 0
-offset_left = -24.285719
-offset_top = -11.0
-offset_right = -16.285719
-offset_bottom = -3.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -395.00003
+offset_top = -33.0
+offset_right = -547.0
+offset_bottom = -89.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(5, 1.4114282)
 script = ExtResource("8_wib81")
 
-[node name="Sun" type="Sprite2D" parent="." unique_id=224481379]
-z_index = -2
-position = Vector2(844, 309)
-scale = Vector2(5.132083, 5.132083)
-texture = ExtResource("8_4lp62")
+[node name="Sun2" type="Sprite2D" parent="." unique_id=2141343365]
+position = Vector2(976, 310)
+scale = Vector2(4.1178017, 4.1178017)
+texture = ExtResource("9_0vewo")
 
-[connection signal="pressed" from="PlayMk2/Button" to="PlayMk2/Button" method="_on_pressed"]
-[connection signal="pressed" from="Credits/Button" to="Credits/Button" method="_on_pressed"]
+[node name="level button array" type="Node2D" parent="." unique_id=1048403914]
+
+[node name="LevelSelectButton" parent="level button array" unique_id=1222874599 instance=ExtResource("11_tbdrc")]
+offset_left = 450.0
+offset_top = 268.0
+offset_right = 514.0
+offset_bottom = 332.0
+
+[node name="LevelSelectButton2" parent="level button array" unique_id=943392383 instance=ExtResource("11_tbdrc")]
+offset_left = 550.0
+offset_top = 268.0
+offset_right = 614.0
+offset_bottom = 332.0
+
+[node name="LevelSelectButton3" parent="level button array" unique_id=34569344 instance=ExtResource("11_tbdrc")]
+offset_left = 650.0
+offset_top = 268.0
+offset_right = 714.0
+offset_bottom = 332.0
+
+[node name="LevelSelectButton4" parent="level button array" unique_id=590592324 instance=ExtResource("11_tbdrc")]
+offset_left = 750.0
+offset_top = 268.0
+offset_right = 814.0
+offset_bottom = 332.0
+
+[node name="LevelSelectButton5" parent="level button array" unique_id=1642343953 instance=ExtResource("11_tbdrc")]
+offset_left = 850.0
+offset_top = 268.0
+offset_right = 914.0
+offset_bottom = 332.0
+
+[node name="LevelSelectButton6" parent="level button array" unique_id=1769092777 instance=ExtResource("11_tbdrc")]
+offset_left = 950.0
+offset_top = 268.0
+offset_right = 1014.0
+offset_bottom = 332.0
+
+[node name="LevelSelectButton7" parent="level button array" unique_id=1844919961 instance=ExtResource("11_tbdrc")]
+offset_left = 1050.0
+offset_top = 268.0
+offset_right = 1114.0
+offset_bottom = 332.0
+
+[node name="LevelSelectButton8" parent="level button array" unique_id=1466020239 instance=ExtResource("11_tbdrc")]
+offset_left = 450.0
+offset_top = 368.0
+offset_right = 514.0
+offset_bottom = 432.0
+
+[node name="LevelSelectButton9" parent="level button array" unique_id=192202340 instance=ExtResource("11_tbdrc")]
+offset_left = 550.0
+offset_top = 368.0
+offset_right = 614.0
+offset_bottom = 432.0
+
+[connection signal="pressed" from="Play button/Button" to="Play button/Button" method="_on_pressed"]
+[connection signal="pressed" from="Credits button/Button" to="Credits button/Button" method="_on_pressed"]
