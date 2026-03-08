@@ -74,3 +74,6 @@ func _process(_delta: float) -> void:
 		cave_bg.hide()
 		
 	pass
+
+func reset_player_state():
+	flipped = false

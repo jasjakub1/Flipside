@@ -27,6 +27,10 @@ window/size/viewport_height=720
 
 enabled=PackedStringArray()
 
+[global_group]
+
+player=""
+
 [input]
 
 left={
