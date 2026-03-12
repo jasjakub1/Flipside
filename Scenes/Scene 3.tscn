@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://d0cdtntvqoetx" path="res://Prefabs/game_manager.tscn" id="3_pcjwn"]
 [ext_resource type="PackedScene" uid="uid://drojujijc7an8" path="res://Prefabs/door.tscn" id="4_pcjwn"]
 [ext_resource type="PackedScene" uid="uid://bsbh1k26q7bqn" path="res://Prefabs/player.tscn" id="5_lvgmb"]
+[ext_resource type="PackedScene" uid="uid://oaovodriiimf" path="res://Prefabs/levelborder.tscn" id="6_lvgmb"]
 
 [node name="Scene3" type="Node2D" unique_id=863320758]
 
@@ -24,3 +25,7 @@ scale = Vector2(1.3, 1.3)
 
 [node name="Player" parent="." unique_id=127984811 instance=ExtResource("5_lvgmb")]
 position = Vector2(-8, 3)
+
+[node name="levelborder" parent="." unique_id=939326769 instance=ExtResource("6_lvgmb")]
+position = Vector2(-213, -132)
+scale = Vector2(0.5, 0.5)
