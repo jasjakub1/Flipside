@@ -52,7 +52,7 @@ func _process(_delta: float) -> void:
 		flipped = true
 		movementDisabled = false
 			
-	if Input.is_action_just_pressed("flip") and playerNode.is_on_ceiling() and flipped:
+	if Input.is_action_just_pressed("flip") and playerNode.touchingCeiling and flipped:
 		movementDisabled = true
 		playerBody.set_deferred("disabled", true)
 		playerNode.translate(Vector2.UP * 3)

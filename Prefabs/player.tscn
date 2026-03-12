@@ -205,3 +205,9 @@ texture = ExtResource("4_2nftw")
 stream = ExtResource("5_knrd4")
 volume_db = 24.0
 parameters/looping = true
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1011248943]
+target_position = Vector2(-6, -12)
+
+[node name="RayCast2D2" type="RayCast2D" parent="." unique_id=213284667]
+target_position = Vector2(6, -12)

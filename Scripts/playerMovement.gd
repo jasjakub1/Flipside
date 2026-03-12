@@ -9,13 +9,28 @@ var SPEED = 0
 var footstep_timer = 0.0
 const footstep_interval = 0.35  # time between steps
 var i = 0
+var touchingCeiling = false
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var game_manager = $"../GameManager"
+@onready var ground_check1 = $RayCast2D
+@onready var ground_check2 = $RayCast2D2
 
 func _physics_process(delta: float) -> void:
+	if ground_check1.is_colliding():
+		var collider = ground_check1.get_collider()
+		if collider.name == "TileMapLayer2":
+			touchingCeiling = true
+			
+	elif ground_check1.is_colliding():
+		var collider = ground_check1.get_collider()
+		if collider.name == "TileMapLayer2":
+			touchingCeiling = true
+	else:
+		touchingCeiling = false
+			
 	# Add the gravity.
 	if game_manager.flipped:
-		if not is_on_ceiling():
+		if not touchingCeiling:
 			velocity.y -= gravity * delta
 			i += 1
 	else:
@@ -31,7 +46,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		animated_sprite.flip_v = true
 		animated_sprite.position = Vector2(0,5)
-		if Input.is_action_just_pressed("up") and is_on_ceiling():
+		if Input.is_action_just_pressed("up") and touchingCeiling:
 			velocity.y = JUMP_VELOCITY
 			
 
@@ -42,7 +57,7 @@ func _physics_process(delta: float) -> void:
 	
 	if (not is_on_floor() and not game_manager.flipped):
 		animated_sprite.play("jump_mid")
-	elif (not is_on_ceiling() and game_manager.flipped):
+	elif (not touchingCeiling and game_manager.flipped):
 		animated_sprite.play("jump_mid")
 	elif direction != 0:
 		animated_sprite.play("running")
@@ -64,7 +79,7 @@ func _physics_process(delta: float) -> void:
 		if abs(SPEED) < 5.0:
 			SPEED = 0
 	
-	if ((is_on_floor() and not game_manager.flipped) or (is_on_ceiling() and game_manager.flipped)) and (direction != 0):
+	if ((is_on_floor() and not game_manager.flipped) or (touchingCeiling and game_manager.flipped)) and (direction != 0):
 		footstep_timer -= delta
 		if footstep_timer <= 0:
 			$AudioStreamPlayer2D.play()
