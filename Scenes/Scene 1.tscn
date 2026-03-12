@@ -44,7 +44,7 @@ offset_top = 72.00001
 offset_right = 231.0
 offset_bottom = 95.00001
 theme = ExtResource("6_mimo7")
-text = "Press enter to return to menu"
+text = "Press escape to return to menu"
 
 [node name="Text2" type="Label" parent="." unique_id=1321021343]
 z_index = -5

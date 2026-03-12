@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dpui3u5n8wd42" path="res://Scripts/playButton.gd" id="5_udm2q"]
 [ext_resource type="Texture2D" uid="uid://d2mw5tamydhco" path="res://Assets/levels 2.png" id="7_0vewo"]
 [ext_resource type="Texture2D" uid="uid://dcmrkdc1e7g2a" path="res://Assets/play 2.png" id="7_4lp62"]
-[ext_resource type="Script" uid="uid://c7hj3773rvl7l" path="res://Scenes/levelsButton.gd" id="7_wib81"]
+[ext_resource type="Script" uid="uid://c7hj3773rvl7l" path="res://Scripts/levelsButton.gd" id="7_wib81"]
 [ext_resource type="Texture2D" uid="uid://du1ts1eedba8q" path="res://Assets/logo 3.png" id="8_0vewo"]
 [ext_resource type="Texture2D" uid="uid://djt12tirtrnjo" path="res://Assets/credits 2.png" id="8_tbdrc"]
 [ext_resource type="Script" uid="uid://glfq6h177eb7" path="res://Scripts/CreditButton.gd" id="8_wib81"]
