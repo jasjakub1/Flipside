@@ -176,6 +176,7 @@ animations = [{
 
 [node name="Player" type="CharacterBody2D" unique_id=127984811]
 script = ExtResource("1_5wxv7")
+metadata/name = "Greg \"The Greg\" Gregorvitch"
 
 [node name="PlayerCollisionShape2D" type="CollisionShape2D" parent="." unique_id=52715806]
 position = Vector2(0, 3)
