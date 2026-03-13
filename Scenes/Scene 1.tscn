@@ -24,8 +24,8 @@ tile_map_data = PackedByteArray("AAD6//n/AAAAAAEAAAD8//n/AAAAAAEAAAD8//v/AAAAAAE
 [node name="GameManager" parent="." unique_id=1526663803 instance=ExtResource("4_5udjf")]
 
 [node name="levelborder" parent="." unique_id=939326769 instance=ExtResource("8_iekmd")]
-position = Vector2(-166, -131)
-scale = Vector2(0.4, 0.4)
+position = Vector2(-163, -151)
+scale = Vector2(0.45, 0.45)
 
 [node name="Door" parent="." unique_id=2142673694 instance=ExtResource("7_5udjf")]
 position = Vector2(219.00002, -72.00001)
