@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://drojujijc7an8" path="res://Prefabs/door.tscn" id="5_pddge"]
 [ext_resource type="PackedScene" uid="uid://cafxfgufpiuui" path="res://Prefabs/text_default.tscn" id="6_njgsp"]
 [ext_resource type="PackedScene" path="res://Prefabs/key.tscn" id="7_7pkvb"]
+[ext_resource type="PackedScene" uid="uid://oaovodriiimf" path="res://Prefabs/levelborder.tscn" id="8_ukkrd"]
 
 [node name="Scene 4" type="Node2D" unique_id=708979876]
 
@@ -36,3 +37,7 @@ text = "Some levels might have a key. Collect the key before going to the door!"
 
 [node name="Key" parent="." unique_id=626037619 instance=ExtResource("7_7pkvb")]
 position = Vector2(92, -8)
+
+[node name="levelborder" parent="." unique_id=939326769 instance=ExtResource("8_ukkrd")]
+position = Vector2(-215, -144)
+scale = Vector2(0.5, 0.5)
