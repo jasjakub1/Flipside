@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c55pt8lsic0bw"
-path="res://.godot/imported/decorative.png-11b5f2649f079200faf5b80ce416a51b.ctex"
+uid="uid://fwcrdsbljr7g"
+path="res://.godot/imported/scientist_run-standard.png-9a13f7d478def5afb1555c78f358ce58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/decorative.png"
-dest_files=["res://.godot/imported/decorative.png-11b5f2649f079200faf5b80ce416a51b.ctex"]
+source_file="res://Assets/scientist-animations/scientist_run-standard.png"
+dest_files=["res://.godot/imported/scientist_run-standard.png-9a13f7d478def5afb1555c78f358ce58.ctex"]
 
 [params]
 

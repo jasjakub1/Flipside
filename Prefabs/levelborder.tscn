@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://oaovodriiimf"]
 
-[ext_resource type="Script" uid="uid://b3il2tslowans" path="res://killzone.gd" id="1_sduic"]
+[ext_resource type="Script" uid="uid://b3il2tslowans" path="res://Scripts/killzone.gd" id="1_sduic"]
 
 [node name="levelborder" type="Node2D" unique_id=939326769]
 

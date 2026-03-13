@@ -9,24 +9,30 @@ script = ExtResource("1_7xmno")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1330707642]
 z_index = -10
-position = Vector2(599, 329)
+position = Vector2(632, 379)
 scale = Vector2(8.88, 4.44)
 texture = ExtResource("1_xbebw")
 
 [node name="Text1" parent="." unique_id=263910221 instance=ExtResource("2_7xmno")]
-offset_left = 273.0
-offset_top = 57.0
-offset_right = 881.77686
-offset_bottom = 314.0
+offset_left = 288.0
+offset_top = 51.0
+offset_right = 994.0
+offset_bottom = 348.0
 scale = Vector2(1, 2.064)
+theme_override_font_sizes/font_size = 24
 text = "CREDITS:
 
 Main level designer - Shawn Xu
 Lead programmer - Jasper Jakubauskas
-Lead visual designer - Marco Ma
+Lead asset designer - Brian Nguyen
 
-Assets from Brackey's godot tutorial and Marco Ma's design
+Door and key from Brackey's godot tutorial
+Tilemap and UI by Jasper Jakubauskas
+Scientist animations, background and splash screen by Brian Nguyen
 
-Press enter to continue
+Press escape to continue
 "
 horizontal_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1893431033]
+position = Vector2(636, 351)

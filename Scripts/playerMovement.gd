@@ -55,14 +55,24 @@ func _physics_process(delta: float) -> void:
 	
 	var direction := Input.get_axis("left", "right")
 	
-	if (not is_on_floor() and not game_manager.flipped):
-		animated_sprite.play("jump_mid")
-	elif (not touchingCeiling and game_manager.flipped):
-		animated_sprite.play("jump_mid")
-	elif direction != 0:
-		animated_sprite.play("running")
+	if not game_manager.flipped:
+		if not is_on_floor():
+			animated_sprite.play("jump-standard")
+	
+		elif direction != 0:
+			animated_sprite.play("run-standard")
+	
+		else:
+			animated_sprite.play("idle-standard")
 	else:
-		animated_sprite.play("idle")
+		if not touchingCeiling:
+			animated_sprite.play("jump-flipped")
+	
+		elif direction != 0:
+			animated_sprite.play("run-flipped")
+	
+		else:
+			animated_sprite.play("idle-flipped")
 		
 	if direction > 0:
 		animated_sprite.flip_h = false
