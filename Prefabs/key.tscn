@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://chudg15bll0yk"]
+[gd_scene format=3 uid="uid://c2rbrudktypqm"]
 
 [ext_resource type="Script" uid="uid://ch37lp8wd08a" path="res://Scripts/key.gd" id="1_5holy"]
 [ext_resource type="Texture2D" uid="uid://b31m4qf3c8vht" path="res://Assets/items_sheet.png" id="2_x88fw"]
@@ -31,5 +31,6 @@ shape = SubResource("RectangleShape2D_f0ci8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1506089963]
 sprite_frames = SubResource("SpriteFrames_e4cop")
+frame_progress = 0.74877363
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
