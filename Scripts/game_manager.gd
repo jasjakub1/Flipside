@@ -35,9 +35,6 @@ func _process(_delta: float) -> void:
 	
 	if Input.is_action_just_pressed("retry"):
 		sceneLoader.reloadScene()
-	
-	if Input.is_action_just_pressed("undo"):
-		sceneLoader.undoScene()
 		
 	if Input.is_action_just_pressed("skip"):
 		sceneLoader.skipScene()

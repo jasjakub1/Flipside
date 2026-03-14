@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://fwcrdsbljr7g" path="res://Assets/scientist-animations/scientist_run-standard.png" id="7_ms580"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4wnb"]
-size = Vector2(7, 14)
+size = Vector2(13, 14)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q7l0e"]
 atlas = ExtResource("2_kgmex")
@@ -318,7 +318,7 @@ script = ExtResource("1_5wxv7")
 metadata/name = "Greg \"The Greg\" Gregorvitch"
 
 [node name="PlayerCollisionShape2D" type="CollisionShape2D" parent="." unique_id=52715806]
-position = Vector2(-1.5, 2)
+position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_c4wnb")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1091044557]
@@ -327,8 +327,8 @@ zoom = Vector2(3, 3)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1750614667]
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_q5dlx")
-animation = &"jump-standard"
-frame_progress = 0.60344607
+animation = &"run-flipped"
+frame_progress = 0.32224354
 
 [node name="Oip" type="Sprite2D" parent="." unique_id=1713720047]
 z_index = -10
@@ -348,7 +348,9 @@ volume_db = 24.0
 parameters/looping = true
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=1011248943]
-target_position = Vector2(-5, -9)
+position = Vector2(0, -2)
+target_position = Vector2(-5, -9.7)
 
 [node name="RayCast2D2" type="RayCast2D" parent="." unique_id=213284667]
-target_position = Vector2(2, -9)
+position = Vector2(0, -2)
+target_position = Vector2(2, -9.7)

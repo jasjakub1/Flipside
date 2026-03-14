@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const ACCELERATION = 12.0
 const DECELERATION = 7.5
-const MAX_SPEED = 80.0
+const MAX_SPEED = 60.0
 const JUMP_VELOCITY = 300.0
 const gravity = 1120.0
 var SPEED = 0
@@ -18,12 +18,12 @@ var touchingCeiling = false
 func _physics_process(delta: float) -> void:
 	if ground_check1.is_colliding():
 		var collider = ground_check1.get_collider()
-		if collider.name == "TileMapLayer2":
+		if collider.name == "TileMapLayer2" or collider.name == "TileMapLayer":
 			touchingCeiling = true
 			
-	elif ground_check1.is_colliding():
-		var collider = ground_check1.get_collider()
-		if collider.name == "TileMapLayer2":
+	elif ground_check2.is_colliding():
+		var collider = ground_check2.get_collider()
+		if collider.name == "TileMapLayer2" or collider.name == "TileMapLayer":
 			touchingCeiling = true
 	else:
 		touchingCeiling = false
@@ -54,6 +54,11 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	
 	var direction := Input.get_axis("left", "right")
+	
+	if direction > 0:
+		$PlayerCollisionShape2D.position = Vector2(1.5, 2)
+	elif direction < 0:
+		$PlayerCollisionShape2D.position = Vector2(-2, 2)
 	
 	if not game_manager.flipped:
 		if not is_on_floor():
