@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c5qfj7g4r4bbf"]
 
 [ext_resource type="Texture2D" uid="uid://d30sgolrjpdkk" path="res://Assets/92a4de.png" id="2_hcxxy"]
-[ext_resource type="Texture2D" uid="uid://dbpfo2e2ag7aj" path="res://Assets/platformSplashScreen.png" id="3_ur25d"]
+[ext_resource type="Texture2D" uid="uid://b20hxm61keegg" path="res://Assets/splashScreen2.png" id="2_tbdrc"]
 [ext_resource type="Script" uid="uid://dpui3u5n8wd42" path="res://Scripts/playButton.gd" id="5_udm2q"]
 [ext_resource type="Texture2D" uid="uid://d2mw5tamydhco" path="res://Assets/levels 2.png" id="7_0vewo"]
 [ext_resource type="Texture2D" uid="uid://dcmrkdc1e7g2a" path="res://Assets/play 2.png" id="7_4lp62"]
@@ -21,9 +21,9 @@ scale = Vector2(10.146667, 4.2550006)
 texture = ExtResource("2_hcxxy")
 
 [node name="PlatformSplashScreen" type="Sprite2D" parent="." unique_id=1965273188]
-position = Vector2(991.00006, 433)
-scale = Vector2(4.8131804, 4.8131804)
-texture = ExtResource("3_ur25d")
+position = Vector2(924, 480)
+scale = Vector2(1.7308465, 1.7308465)
+texture = ExtResource("2_tbdrc")
 
 [node name="Logo" type="Sprite2D" parent="." unique_id=1603490844]
 position = Vector2(270, 139)
