@@ -314,6 +314,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D" unique_id=127984811]
+scale = Vector2(1.5, 1.5)
 script = ExtResource("1_5wxv7")
 metadata/name = "Greg \"The Greg\" Gregorvitch"
 

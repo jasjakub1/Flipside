@@ -36,5 +36,5 @@ offset_bottom = 175.0
 text = "Press 'R' to restart the level..."
 
 [node name="levelborder" parent="." unique_id=939326769 instance=ExtResource("7_0cpaj")]
-position = Vector2(-152, -69)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-276, -148)
+scale = Vector2(0.7, 0.7)
