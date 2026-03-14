@@ -4,7 +4,7 @@ var ButtonToggled = false
 @onready var splashScreen = $"../../PlatformSplashScreen"
 @onready var sunPNG = $"../../Sun2"
 
-func _pressed() -> void:
+func _on_pressed() -> void:
 	if ButtonToggled:
 		ButtonToggled = false
 		splashScreen.visible = true

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cafxfgufpiuui" path="res://Prefabs/text_default.tscn" id="5_l730f"]
 [ext_resource type="Theme" uid="uid://de0fu0i6deala" path="res://Assets/new_theme.tres" id="6_mimo7"]
 [ext_resource type="PackedScene" uid="uid://drojujijc7an8" path="res://Prefabs/door.tscn" id="7_5udjf"]
-[ext_resource type="PackedScene" uid="uid://oaovodriiimf" path="res://Prefabs/levelborder.tscn" id="8_iekmd"]
+[ext_resource type="PackedScene" path="res://Prefabs/levelborder.tscn" id="8_iekmd"]
 
 [node name="Scene1" type="Node2D" unique_id=530611151]
 
@@ -46,18 +46,16 @@ offset_bottom = 95.00001
 theme = ExtResource("6_mimo7")
 text = "Press escape to return to menu"
 
-[node name="Text2" type="Label" parent="." unique_id=1321021343]
-z_index = -5
-offset_left = 173.0
-offset_top = 76.00001
-offset_right = 445.0
-offset_bottom = 99.00001
-scale = Vector2(0.31374392, 0.64791083)
-text = "Press Space to flip sides of the map"
-
 [node name="Text4" parent="." unique_id=1330729503 instance=ExtResource("5_l730f")]
 offset_left = 93.0
 offset_top = -84.00001
 offset_right = 404.0
 offset_bottom = -61.000008
 text = "Get to the door to complete the level! »»"
+
+[node name="Text2" parent="." unique_id=1835904977 instance=ExtResource("5_l730f")]
+offset_left = 143.00002
+offset_top = 68.0
+offset_right = 398.0
+offset_bottom = 91.0
+text = "Press Space to flip sides of the map"

@@ -6,7 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cfn3ylm57vd2l" path="res://Prefabs/tile_map_layer.tscn" id="4_ng40w"]
 [ext_resource type="PackedScene" uid="uid://bswssx31jjx4k" path="res://Prefabs/tile_map_layer_2.tscn" id="5_oo85w"]
 [ext_resource type="PackedScene" path="res://Prefabs/key.tscn" id="6_a7tcg"]
-[ext_resource type="PackedScene" uid="uid://oaovodriiimf" path="res://Prefabs/levelborder.tscn" id="7_v51fl"]
+[ext_resource type="PackedScene" path="res://Prefabs/levelborder.tscn" id="7_v51fl"]
+[ext_resource type="PackedScene" uid="uid://cafxfgufpiuui" path="res://Prefabs/text_default.tscn" id="8_ng40w"]
 
 [node name="Scene 5" type="Node2D" unique_id=219490592]
 
@@ -33,3 +34,10 @@ position = Vector2(212, -64)
 [node name="levelborder" parent="." unique_id=939326769 instance=ExtResource("7_v51fl")]
 position = Vector2(-248, -192)
 scale = Vector2(0.7, 0.7)
+
+[node name="Text1" parent="." unique_id=263910221 instance=ExtResource("8_ng40w")]
+offset_left = 148.00002
+offset_top = 45.000004
+offset_right = 572.0
+offset_bottom = 68.0
+text = "Some levels require a key to be collected before advancing"
