@@ -10,12 +10,17 @@ var movementDisabled = false
 @onready var sky_bg = $"../Player/Oip"
 @onready var cave_bg = $"../Player/VeryDarkPurpleFreeSolidcolorBackground"
 
+@onready var purpleFX = $"../Player/GPUParticles2D"
+@onready var greenFX = $"../Player/GPUParticles2D2"
+
 @onready var playerNode = $"../Player"
 @onready var playerBody = $"../Player/PlayerCollisionShape2D"
 
 @onready var floorLayer = $"../TileMapLayer"
 
-
+func _ready() -> void:
+	greenFX.top_level = true
+	purpleFX.top_level = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _has_exited_floor() -> bool:
@@ -40,6 +45,8 @@ func _process(_delta: float) -> void:
 		sceneLoader.skipScene()
 		
 	if Input.is_action_just_pressed("flip") and playerNode.is_on_floor() and not flipped:
+		greenFX.position = playerNode.position
+		greenFX.emitting = true
 		movementDisabled = true
 		playerBody.set_deferred("disabled", true)
 		playerNode.translate(Vector2.DOWN * 3)
@@ -50,6 +57,8 @@ func _process(_delta: float) -> void:
 		movementDisabled = false
 			
 	if Input.is_action_just_pressed("flip") and playerNode.touchingCeiling and flipped:
+		purpleFX.position = playerNode.position + Vector2.DOWN * 10
+		purpleFX.emitting = true
 		movementDisabled = true
 		playerBody.set_deferred("disabled", true)
 		playerNode.translate(Vector2.UP * 3)

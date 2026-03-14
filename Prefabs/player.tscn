@@ -3,13 +3,15 @@
 [ext_resource type="Script" uid="uid://cojrj5s3y1p7h" path="res://Scripts/playerMovement.gd" id="1_5wxv7"]
 [ext_resource type="Texture2D" uid="uid://b0pwnmur6aklo" path="res://Assets/scientist-animations/scientist_idle-flipped.png" id="2_kgmex"]
 [ext_resource type="Texture2D" uid="uid://cfnblseeignxo" path="res://Assets/scientist-animations/scientist_idle-standard.png" id="3_2xbkd"]
-[ext_resource type="Texture2D" uid="uid://drgimstcny87i" path="res://Assets/OIP.webp" id="3_y5hcb"]
-[ext_resource type="Texture2D" uid="uid://t0suqkl5texf" path="res://Assets/very-dark-purple-free-solidcolor-background.jpg" id="4_2nftw"]
 [ext_resource type="Texture2D" uid="uid://bdugk5adxppg8" path="res://Assets/scientist-animations/scientist_jump-flipped.png" id="4_3vpsw"]
 [ext_resource type="AudioStream" uid="uid://bcryw7anmcipg" path="res://Assets/joentnt-walk-on-dirt-1-291981.mp3" id="5_knrd4"]
 [ext_resource type="Texture2D" uid="uid://cbwgg8gre4wwa" path="res://Assets/scientist-animations/scientist_jump-standard.png" id="5_m62uw"]
 [ext_resource type="Texture2D" uid="uid://bhq6vofvkgo3p" path="res://Assets/scientist-animations/scientist_run-flipped.png" id="6_b30ri"]
 [ext_resource type="Texture2D" uid="uid://fwcrdsbljr7g" path="res://Assets/scientist-animations/scientist_run-standard.png" id="7_ms580"]
+[ext_resource type="Texture2D" uid="uid://cq2ljoilgg2qt" path="res://Assets/standard-bg.png" id="8_kgmex"]
+[ext_resource type="Texture2D" uid="uid://r5lljvmakqa4" path="res://Assets/cave-bg.png" id="9_kgmex"]
+[ext_resource type="Texture2D" uid="uid://c45mnhn873i0g" path="res://Assets/particles/particle orange.png" id="11_3vpsw"]
+[ext_resource type="Texture2D" uid="uid://dhhon86up5rva" path="res://Assets/particles/particle green.png" id="12_3vpsw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4wnb"]
 size = Vector2(13, 14)
@@ -313,6 +315,22 @@ animations = [{
 "speed": 15.0
 }]
 
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_2xbkd"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -1.5, 0)
+emission_shape_scale = Vector3(1, 3, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+angle_min = -720.0
+angle_max = 720.0
+inherit_velocity_ratio = 1.7149999999999999
+spread = 180.0
+initial_velocity_max = 10.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.14999999
+scale_max = 0.25
+turbulence_influence_max = 0.883
+
 [node name="Player" type="CharacterBody2D" unique_id=127984811]
 script = ExtResource("1_5wxv7")
 metadata/name = "Greg \"The Greg\" Gregorvitch"
@@ -332,15 +350,15 @@ frame_progress = 0.32224354
 
 [node name="Oip" type="Sprite2D" parent="." unique_id=1713720047]
 z_index = -10
-position = Vector2(2.6429254e-05, -6.67572e-06)
-scale = Vector2(1.2320676, 1.108108)
-texture = ExtResource("3_y5hcb")
+position = Vector2(0.5000024, 1.335144e-05)
+scale = Vector2(1.334375, 1.3333334)
+texture = ExtResource("8_kgmex")
 
 [node name="VeryDarkPurpleFreeSolidcolorBackground" type="Sprite2D" parent="." unique_id=1705493520]
 z_index = -10
-position = Vector2(1.1444092e-05, -1.9073486e-06)
-scale = Vector2(0.07604167, 0.07592593)
-texture = ExtResource("4_2nftw")
+position = Vector2(-1.5258789e-05, -7.6293945e-06)
+scale = Vector2(0.33384144, 0.33333334)
+texture = ExtResource("9_kgmex")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=586273317]
 stream = ExtResource("5_knrd4")
@@ -354,3 +372,25 @@ target_position = Vector2(-5, -9.7)
 [node name="RayCast2D2" type="RayCast2D" parent="." unique_id=213284667]
 position = Vector2(0, -2)
 target_position = Vector2(2, -9.7)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1878467771]
+position = Vector2(-1, 6)
+scale = Vector2(2.4400005, 2.4400005)
+emitting = false
+amount = 50
+texture = ExtResource("11_3vpsw")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_2xbkd")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="." unique_id=813508314]
+position = Vector2(-1, 2)
+scale = Vector2(2.4400005, 2.4400005)
+emitting = false
+amount = 50
+texture = ExtResource("12_3vpsw")
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+process_material = SubResource("ParticleProcessMaterial_2xbkd")

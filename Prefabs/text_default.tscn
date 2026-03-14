@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cafxfgufpiuui"]
 
 [ext_resource type="FontFile" uid="uid://baqt4eyve8bsr" path="res://Assets/ThaleahFat.ttf" id="1_001nf"]
+[ext_resource type="Script" uid="uid://b5iqdkmjmdb0x" path="res://Scripts/textController.gd" id="2_c53tk"]
 
 [node name="Text1" type="Label" unique_id=263910221]
 z_index = -5
@@ -11,3 +12,4 @@ offset_bottom = 24.0
 scale = Vector2(0.31374392, 0.64791083)
 theme_override_fonts/font = ExtResource("1_001nf")
 text = "Use Arrow keys to move"
+script = ExtResource("2_c53tk")
