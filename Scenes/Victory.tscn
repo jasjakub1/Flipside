@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://d30sgolrjpdkk" path="res://Assets/92a4de.png" id="1_q6vst"]
 [ext_resource type="Texture2D" uid="uid://bvb0pbe8e2m81" path="res://Assets/unnamed.png" id="2_13fhg"]
-[ext_resource type="PackedScene" uid="uid://d0cdtntvqoetx" path="res://Prefabs/game_manager.tscn" id="3_13fhg"]
 
 [node name="Victory" type="Node2D" unique_id=239767971]
 
@@ -18,5 +17,3 @@ texture = ExtResource("2_13fhg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1888708988]
 position = Vector2(651, 349)
-
-[node name="GameManager" parent="." unique_id=1526663803 instance=ExtResource("3_13fhg")]
