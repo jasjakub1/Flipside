@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const ACCELERATION = 12.0
 const DECELERATION = 7.5
-const MAX_SPEED = 60.0
+const MAX_SPEED = 65.0
 const JUMP_VELOCITY = 300.0
 const gravity = 1120.0
 var SPEED = 0
