@@ -354,13 +354,13 @@ frame_progress = 0.32224354
 [node name="Oip" type="Sprite2D" parent="." unique_id=1713720047]
 z_index = -10
 position = Vector2(0.5000024, 1.335144e-05)
-scale = Vector2(1.334375, 1.3333334)
+scale = Vector2(2, 1.999)
 texture = ExtResource("8_kgmex")
 
 [node name="VeryDarkPurpleFreeSolidcolorBackground" type="Sprite2D" parent="." unique_id=1705493520]
 z_index = -10
 position = Vector2(-1.5258789e-05, -7.6293945e-06)
-scale = Vector2(0.33384144, 0.33333334)
+scale = Vector2(0.5, 0.499)
 texture = ExtResource("9_kgmex")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=586273317]
