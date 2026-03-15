@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bswssx31jjx4k" path="res://Prefabs/tile_map_layer_2.tscn" id="5_2gtcu"]
 [ext_resource type="PackedScene" uid="uid://drojujijc7an8" path="res://Prefabs/door.tscn" id="6_6k04e"]
 [ext_resource type="PackedScene" uid="uid://c2rbrudktypqm" path="res://Prefabs/key.tscn" id="7_euv7w"]
+[ext_resource type="PackedScene" uid="uid://cafxfgufpiuui" path="res://Prefabs/text_default.tscn" id="8_ovfuy"]
 
 [node name="Scene9" type="Node2D" unique_id=1872864190]
 
@@ -31,3 +32,11 @@ position = Vector2(93, -48)
 
 [node name="Key" parent="." unique_id=626037619 instance=ExtResource("7_euv7w")]
 position = Vector2(92, -120)
+
+[node name="Text1" parent="." unique_id=263910221 instance=ExtResource("8_ovfuy")]
+offset_left = 72.0
+offset_top = 56.0
+offset_right = 313.0
+offset_bottom = 89.0
+text = "Flipping on long pillars is a great
+way to get to obscure areas"
