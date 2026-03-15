@@ -181,19 +181,19 @@ offset_top = 432.0
 offset_right = 864.0
 offset_bottom = 496.0
 
-[node name="LevelSelectButton" parent="level button array" unique_id=216666108 instance=ExtResource("11_tbdrc")]
+[node name="LevelSelectButton15" parent="level button array" unique_id=216666108 instance=ExtResource("11_tbdrc")]
 offset_left = 896.0
 offset_top = 432.0
 offset_right = 960.0
 offset_bottom = 496.0
 
-[node name="LevelSelectButton15" parent="level button array" unique_id=559728659 instance=ExtResource("11_tbdrc")]
+[node name="LevelSelectButton16" parent="level button array" unique_id=559728659 instance=ExtResource("11_tbdrc")]
 offset_left = 512.0
 offset_top = 520.0
 offset_right = 576.0
 offset_bottom = 584.0
 
-[node name="LevelSelectButton16" parent="level button array" unique_id=2074160504 instance=ExtResource("11_tbdrc")]
+[node name="LevelSelectButton17" parent="level button array" unique_id=2074160504 instance=ExtResource("11_tbdrc")]
 offset_left = 608.0
 offset_top = 520.0
 offset_right = 672.0
