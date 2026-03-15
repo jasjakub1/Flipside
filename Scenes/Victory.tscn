@@ -2,6 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://d30sgolrjpdkk" path="res://Assets/92a4de.png" id="1_q6vst"]
 [ext_resource type="Texture2D" uid="uid://bvb0pbe8e2m81" path="res://Assets/unnamed.png" id="2_13fhg"]
+[ext_resource type="PackedScene" uid="uid://d0cdtntvqoetx" path="res://Prefabs/game_manager.tscn" id="3_13fhg"]
+[ext_resource type="PackedScene" uid="uid://cfn3ylm57vd2l" path="res://Prefabs/tile_map_layer.tscn" id="5_lh6sg"]
+[ext_resource type="PackedScene" uid="uid://bswssx31jjx4k" path="res://Prefabs/tile_map_layer_2.tscn" id="6_1ttpw"]
+[ext_resource type="PackedScene" uid="uid://bsbh1k26q7bqn" path="res://Prefabs/player.tscn" id="7_1ttpw"]
+[ext_resource type="Texture2D" uid="uid://csusfmg4upduv" path="res://Assets/Screenshot 2026-03-15 at 6.19.23 pm.png" id="7_f2md5"]
+[ext_resource type="Texture2D" uid="uid://iyywu35gm2f3" path="res://Assets/Screenshot 2026-03-15 at 6.20.35 pm.png" id="8_ebpg4"]
 
 [node name="Victory" type="Node2D" unique_id=239767971]
 
@@ -11,9 +17,30 @@ scale = Vector2(9.2, 3.89)
 texture = ExtResource("1_q6vst")
 
 [node name="Victory" type="Sprite2D" parent="." unique_id=1773947791]
-position = Vector2(671.00006, 413.00003)
+position = Vector2(687.00006, 369.00003)
 scale = Vector2(15, 15)
 texture = ExtResource("2_13fhg")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1888708988]
 position = Vector2(651, 349)
+
+[node name="GameManager" parent="." unique_id=1526663803 instance=ExtResource("3_13fhg")]
+
+[node name="TileMapLayer" parent="." unique_id=1816079958 instance=ExtResource("5_lh6sg")]
+position = Vector2(50189, 41106)
+
+[node name="TileMapLayer2" parent="." unique_id=746684253 instance=ExtResource("6_1ttpw")]
+position = Vector2(50189, 41106)
+
+[node name="Player" parent="." unique_id=127984811 instance=ExtResource("7_1ttpw")]
+position = Vector2(50902, 38870)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=522926448]
+position = Vector2(261, 654)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("7_f2md5")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2143498001]
+position = Vector2(1085, 660)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_ebpg4")
