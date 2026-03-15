@@ -27,3 +27,10 @@ func loadSceneFile(sceneFilePath : String):
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("return"):
 		loadSceneFile("res://Scenes/Main Menu.tscn")
+		
+	if Input.is_action_just_pressed("retry"):
+		reloadScene()
+	
+	if get_tree().current_scene:
+		if get_tree().current_scene.name == "Victory":
+			i = 0

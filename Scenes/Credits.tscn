@@ -1,11 +1,9 @@
 [gd_scene format=3 uid="uid://bqg6wo8v7hqmo"]
 
-[ext_resource type="Script" uid="uid://bs4rcpfmh5evk" path="res://Scripts/creditsController.gd" id="1_7xmno"]
 [ext_resource type="Texture2D" uid="uid://cwpaywp283aws" path="res://Assets/000000.png" id="1_xbebw"]
 [ext_resource type="PackedScene" uid="uid://cafxfgufpiuui" path="res://Prefabs/text_default.tscn" id="2_7xmno"]
 
 [node name="Credits" type="Node2D" unique_id=731817300]
-script = ExtResource("1_7xmno")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1330707642]
 z_index = -10
