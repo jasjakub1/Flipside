@@ -21,6 +21,8 @@ var movementDisabled = false
 func _ready() -> void:
 	greenFX.top_level = true
 	purpleFX.top_level = true
+	greenFX.position = playerNode.position
+	purpleFX.position = playerNode.position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _has_exited_floor() -> bool:
@@ -40,7 +42,6 @@ func _process(_delta: float) -> void:
 		
 	if Input.is_action_just_pressed("flip") and playerNode.is_on_floor() and not flipped:
 		greenFX.position = playerNode.position
-		greenFX.emitting = true
 		movementDisabled = true
 		playerBody.set_deferred("disabled", true)
 		playerNode.translate(Vector2.DOWN * 3)
@@ -49,10 +50,10 @@ func _process(_delta: float) -> void:
 		playerBody.set_deferred("disabled", false)
 		flipped = true
 		movementDisabled = false
+		greenFX.emitting = true
 			
 	if Input.is_action_just_pressed("flip") and playerNode.touchingCeiling and flipped:
 		purpleFX.position = playerNode.position + Vector2.DOWN * 10
-		purpleFX.emitting = true
 		movementDisabled = true
 		playerBody.set_deferred("disabled", true)
 		playerNode.translate(Vector2.UP * 3)
@@ -61,6 +62,7 @@ func _process(_delta: float) -> void:
 		playerBody.set_deferred("disabled", false)
 		flipped = false
 		movementDisabled = false
+		purpleFX.emitting = true
 			
 	if flipped:
 		nonflippedmap.hide()
