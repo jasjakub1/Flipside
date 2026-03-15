@@ -169,6 +169,12 @@ offset_top = 432.0
 offset_right = 672.0
 offset_bottom = 496.0
 
+[node name="LevelSelectButton" parent="level button array" unique_id=797362524 instance=ExtResource("11_tbdrc")]
+offset_left = 704.0
+offset_top = 432.0
+offset_right = 768.0
+offset_bottom = 496.0
+
 [node name="MainMenuBg" type="Sprite2D" parent="." unique_id=2038645332]
 z_index = -10
 position = Vector2(640.5, 356.5)
