@@ -21,6 +21,8 @@ var movementDisabled = false
 func _ready() -> void:
 	greenFX.top_level = true
 	purpleFX.top_level = true
+	greenFX.position = playerNode.position
+	purpleFX.position = playerNode.position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _has_exited_floor() -> bool:
