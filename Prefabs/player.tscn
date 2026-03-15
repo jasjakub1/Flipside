@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://r5lljvmakqa4" path="res://Assets/cave-bg.png" id="9_kgmex"]
 [ext_resource type="Texture2D" uid="uid://c45mnhn873i0g" path="res://Assets/particles/particle orange.png" id="11_3vpsw"]
 [ext_resource type="Texture2D" uid="uid://dhhon86up5rva" path="res://Assets/particles/particle green.png" id="12_3vpsw"]
+[ext_resource type="PackedScene" uid="uid://cafxfgufpiuui" path="res://Prefabs/text_default.tscn" id="13_m62uw"]
+[ext_resource type="Script" uid="uid://c3lcvytc1fph0" path="res://Prefabs/levelTracker.gd" id="14_b30ri"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c4wnb"]
 size = Vector2(13, 14)
@@ -323,7 +325,7 @@ emission_shape = 3
 emission_box_extents = Vector3(1, 1, 1)
 angle_min = -720.0
 angle_max = 720.0
-inherit_velocity_ratio = 1.7149999999999999
+inherit_velocity_ratio = 1.715
 spread = 180.0
 initial_velocity_max = 10.0
 gravity = Vector3(0, 0, 0)
@@ -394,3 +396,11 @@ lifetime = 0.3
 one_shot = true
 explosiveness = 1.0
 process_material = SubResource("ParticleProcessMaterial_2xbkd")
+
+[node name="Text1" parent="." unique_id=263910221 instance=ExtResource("13_m62uw")]
+offset_left = 110.0
+offset_top = -77.99999
+offset_right = 297.0
+offset_bottom = -54.999992
+text = "Level: "
+script = ExtResource("14_b30ri")
