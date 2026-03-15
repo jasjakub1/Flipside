@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cfn3ylm57vd2l" path="res://Prefabs/tile_map_layer.tscn" id="2_srrlr"]
 [ext_resource type="PackedScene" uid="uid://bswssx31jjx4k" path="res://Prefabs/tile_map_layer_2.tscn" id="3_tbx7g"]
 [ext_resource type="PackedScene" uid="uid://cafxfgufpiuui" path="res://Prefabs/text_default.tscn" id="4_srrlr"]
-[ext_resource type="PackedScene" uid="uid://oaovodriiimf" path="res://Prefabs/levelborder.tscn" id="7_0cpaj"]
+[ext_resource type="PackedScene" path="res://Prefabs/levelborder.tscn" id="7_0cpaj"]
 
 [node name="Scene6" type="Node2D" unique_id=1257470363]
 
