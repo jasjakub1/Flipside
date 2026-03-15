@@ -27,7 +27,7 @@ position = Vector2(0, -16)
 position = Vector2(149, -56)
 
 [node name="levelborder" parent="." unique_id=939326769 instance=ExtResource("6_pifhx")]
-position = Vector2(-320, -224)
+position = Vector2(-488, -336)
 
 [node name="Key" parent="." unique_id=626037619 instance=ExtResource("7_w21hv")]
 position = Vector2(148, -12)
