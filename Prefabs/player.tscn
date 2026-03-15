@@ -399,9 +399,9 @@ process_material = SubResource("ParticleProcessMaterial_2xbkd")
 
 [node name="Text1" parent="." unique_id=263910221 instance=ExtResource("13_m62uw")]
 z_index = 1000
-offset_left = 110.0
-offset_top = -77.99999
-offset_right = 297.0
-offset_bottom = -54.999992
+offset_left = 110.00001
+offset_top = -78.66666
+offset_right = 297.00003
+offset_bottom = -55.666656
 text = "Level: "
 script = ExtResource("14_b30ri")
