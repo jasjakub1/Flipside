@@ -1,6 +1,6 @@
 extends Node
 
-var scenes = ["res://Scenes/Scene 1.tscn", "res://Scenes/Scene 3.tscn", "res://Scenes/Scene 2.tscn", "res://Scenes/Scene 6.tscn", "res://Scenes/Scene 15.tscn", "res://Scenes/Scene 4.tscn", "res://Scenes/Scene 5.tscn", "res://Scenes/Scene 7.tscn", "res://Scenes/Scene 8.tscn", "res://Scenes/Scene 9.tscn", "res://Scenes/Scene 10.tscn", "res://Scenes/Scene 11.tscn", "res://Scenes/Scene 12.tscn", "res://Scenes/Scene 13.tscn", "res://Scenes/Scene 14.tscn", "res://Scenes/Scene 16.tscn", "res://Scenes/Victory.tscn"]
+var scenes = ["res://Scenes/Scene 1.tscn", "res://Scenes/Scene 3.tscn", "res://Scenes/Scene 2.tscn", "res://Scenes/Scene 6.tscn", "res://Scenes/Scene 15.tscn", "res://Scenes/Scene 4.tscn", "res://Scenes/Scene 9.tscn", "res://Scenes/Scene 5.tscn", "res://Scenes/Scene 7.tscn", "res://Scenes/Scene 8.tscn", "res://Scenes/Scene 10.tscn", "res://Scenes/Scene 11.tscn", "res://Scenes/Scene 12.tscn", "res://Scenes/Scene 13.tscn", "res://Scenes/Scene 14.tscn", "res://Scenes/Scene 16.tscn", "res://Scenes/Victory.tscn"]
 var i = 0
 
 func nextScene():
