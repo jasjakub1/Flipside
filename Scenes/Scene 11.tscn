@@ -23,7 +23,8 @@ tile_map_data = PackedByteArray("AAD8/wMAAAAAAAEAAAD+/wMAAAAAAAEAAAAAAAMAAAAAAAE
 [node name="Player" parent="." unique_id=127984811 instance=ExtResource("4_wnmec")]
 
 [node name="levelborder" parent="." unique_id=939326769 instance=ExtResource("5_wnmec")]
-position = Vector2(-600, -320)
+position = Vector2(-424, -200)
+scale = Vector2(0.7, 0.7)
 
 [node name="Key" parent="." unique_id=626037619 instance=ExtResource("6_o5sxp")]
 position = Vector2(208, 128)

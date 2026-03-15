@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c5qfj7g4r4bbf"]
 
 [ext_resource type="Texture2D" uid="uid://b20hxm61keegg" path="res://Assets/splashScreen2.png" id="2_tbdrc"]
-[ext_resource type="Script" uid="uid://dpui3u5n8wd42" path="res://Scripts/playButton.gd" id="5_udm2q"]
+[ext_resource type="Script" path="res://Scripts/playButton.gd" id="5_udm2q"]
 [ext_resource type="Texture2D" uid="uid://d2mw5tamydhco" path="res://Assets/levels 2.png" id="7_0vewo"]
 [ext_resource type="Texture2D" uid="uid://dcmrkdc1e7g2a" path="res://Assets/play 2.png" id="7_4lp62"]
 [ext_resource type="Texture2D" uid="uid://du1ts1eedba8q" path="res://Assets/logo 3.png" id="8_0vewo"]
@@ -97,59 +97,77 @@ texture = ExtResource("9_0vewo")
 
 [node name="level button array" type="Node2D" parent="." unique_id=1048403914]
 
-[node name="LevelSelectButton" parent="level button array" unique_id=1222874599 instance=ExtResource("11_tbdrc")]
-offset_left = 450.0
-offset_top = 268.0
-offset_right = 514.0
-offset_bottom = 332.0
+[node name="LevelSelectButton1" parent="level button array" unique_id=1222874599 instance=ExtResource("11_tbdrc")]
+offset_left = 512.0
+offset_top = 256.0
+offset_right = 576.0
+offset_bottom = 320.0
 
-[node name="LevelSelectButton2" parent="level button array" unique_id=943392383 instance=ExtResource("11_tbdrc")]
-offset_left = 550.0
-offset_top = 268.0
-offset_right = 614.0
-offset_bottom = 332.0
+[node name="LevelSelectButton2" parent="level button array" unique_id=396669355 instance=ExtResource("11_tbdrc")]
+offset_left = 608.0
+offset_top = 256.0
+offset_right = 672.0
+offset_bottom = 320.0
 
-[node name="LevelSelectButton3" parent="level button array" unique_id=34569344 instance=ExtResource("11_tbdrc")]
-offset_left = 650.0
-offset_top = 268.0
-offset_right = 714.0
-offset_bottom = 332.0
+[node name="LevelSelectButton3" parent="level button array" unique_id=757361594 instance=ExtResource("11_tbdrc")]
+offset_left = 704.0
+offset_top = 256.0
+offset_right = 768.0
+offset_bottom = 320.0
 
-[node name="LevelSelectButton4" parent="level button array" unique_id=590592324 instance=ExtResource("11_tbdrc")]
-offset_left = 750.0
-offset_top = 268.0
-offset_right = 814.0
-offset_bottom = 332.0
+[node name="LevelSelectButton4" parent="level button array" unique_id=943392383 instance=ExtResource("11_tbdrc")]
+offset_left = 800.0
+offset_top = 256.0
+offset_right = 864.0
+offset_bottom = 320.0
 
-[node name="LevelSelectButton5" parent="level button array" unique_id=1642343953 instance=ExtResource("11_tbdrc")]
-offset_left = 850.0
-offset_top = 268.0
-offset_right = 914.0
-offset_bottom = 332.0
+[node name="LevelSelectButton5" parent="level button array" unique_id=34569344 instance=ExtResource("11_tbdrc")]
+offset_left = 896.0
+offset_top = 256.0
+offset_right = 960.0
+offset_bottom = 320.0
 
-[node name="LevelSelectButton6" parent="level button array" unique_id=1769092777 instance=ExtResource("11_tbdrc")]
-offset_left = 950.0
-offset_top = 268.0
-offset_right = 1014.0
-offset_bottom = 332.0
+[node name="LevelSelectButton6" parent="level button array" unique_id=590592324 instance=ExtResource("11_tbdrc")]
+offset_left = 512.0
+offset_top = 344.0
+offset_right = 576.0
+offset_bottom = 408.0
 
-[node name="LevelSelectButton7" parent="level button array" unique_id=1844919961 instance=ExtResource("11_tbdrc")]
-offset_left = 1050.0
-offset_top = 268.0
-offset_right = 1114.0
-offset_bottom = 332.0
+[node name="LevelSelectButton7" parent="level button array" unique_id=1642343953 instance=ExtResource("11_tbdrc")]
+offset_left = 608.0
+offset_top = 344.0
+offset_right = 672.0
+offset_bottom = 408.0
 
-[node name="LevelSelectButton8" parent="level button array" unique_id=1466020239 instance=ExtResource("11_tbdrc")]
-offset_left = 450.0
-offset_top = 368.0
-offset_right = 514.0
-offset_bottom = 432.0
+[node name="LevelSelectButton8" parent="level button array" unique_id=1769092777 instance=ExtResource("11_tbdrc")]
+offset_left = 704.0
+offset_top = 344.0
+offset_right = 768.0
+offset_bottom = 408.0
 
-[node name="LevelSelectButton9" parent="level button array" unique_id=192202340 instance=ExtResource("11_tbdrc")]
-offset_left = 550.0
-offset_top = 368.0
-offset_right = 614.0
-offset_bottom = 432.0
+[node name="LevelSelectButton9" parent="level button array" unique_id=1844919961 instance=ExtResource("11_tbdrc")]
+offset_left = 800.0
+offset_top = 344.0
+offset_right = 864.0
+offset_bottom = 408.0
+
+[node name="LevelSelectButton10" parent="level button array" unique_id=1466020239 instance=ExtResource("11_tbdrc")]
+offset_left = 896.0
+offset_top = 344.0
+offset_right = 960.0
+offset_bottom = 408.0
+
+[node name="LevelSelectButton11" parent="level button array" unique_id=192202340 instance=ExtResource("11_tbdrc")]
+offset_left = 512.0
+offset_top = 432.0
+offset_right = 576.0
+offset_bottom = 496.0
+
+[node name="LevelSelectButton12" parent="level button array" unique_id=1007538771 instance=ExtResource("11_tbdrc")]
+offset_left = 608.0
+offset_top = 432.0
+offset_right = 672.0
+offset_bottom = 496.0
 
 [node name="MainMenuBg" type="Sprite2D" parent="." unique_id=2038645332]
 z_index = -10
