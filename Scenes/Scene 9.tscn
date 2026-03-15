@@ -34,9 +34,9 @@ position = Vector2(93, -48)
 position = Vector2(92, -120)
 
 [node name="Text1" parent="." unique_id=263910221 instance=ExtResource("8_ovfuy")]
-offset_left = 72.0
-offset_top = 56.0
-offset_right = 313.0
-offset_bottom = 89.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 201.0
+offset_bottom = -7.0
 text = "Flipping on long pillars is a great
 way to get to obscure areas"
