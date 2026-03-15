@@ -11,7 +11,7 @@
 [node name="Scene9" type="Node2D" unique_id=1872864190]
 
 [node name="levelborder" parent="." unique_id=939326769 instance=ExtResource("1_dpglw")]
-position = Vector2(-256, -141)
+position = Vector2(-360, -296)
 scale = Vector2(0.7, 0.7)
 
 [node name="GameManager" parent="." unique_id=1526663803 instance=ExtResource("2_fl5ck")]
